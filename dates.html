@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton Academy Player Management</title>
+    <link rel="stylesheet" href="dates.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Badminton Academy Player Management</h1>
+        
+        <form id="playerForm">
+            <input type="text" id="playerName" placeholder="Player Name" required>
+            <input type="date" id="admissionDate" required>
+            <input type="number" id="fees" placeholder="Fees" required>
+            <select id="status">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+            <button type="button" onclick="attemptAddPlayer()">Add Player</button>
+        </form>
+
+        <div id="playerList"></div>
+    </div>
+
+    <script src="dates.js"></script>
+</body>
+</html>

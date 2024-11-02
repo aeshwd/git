@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast N Furious Badminton Academy Fees Status</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Fast N Furious Badminton Academy.png" type="image/x-icon">
+</head>
+<body>
+
+  
+    <div class="container">
+
+        <div class="logo">
+            <img src="Fast N Furious Badminton Academy.png">
+        </div>
+        <h1>Fast N Furious Badminton Academy Fees Status</h1>
+
+        <button class="action-button redirect" onclick="window.location.href='dates.html'">View Player Details</button>
+        
+        <div id="monthYearSelector">
+            <button class="nav-button" onclick="prevYear()">&#9664; </button>
+            <div class="dropdown-container">
+                <select id="monthDropdown" onchange="changeMonth()" class="dropdown">
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+            </div>
+            <button class="nav-button" onclick="nextYear()"> &#9654;</button>
+            <span id="currentYearDisplay" class="year-display"></span>
+        </div>
+
+        <form id="playerForm" class="form">
+            <input type="text" id="playerName" class="input-field" placeholder="Player Name" required>
+            <input type="number" id="fees" class="input-field" placeholder="Fees" required>
+            <button class="action-button" type="submit" onclick="addPlayer(event)">Add Player</button>
+        </form>
+
+        <div id="playerCards" class="player-cards"></div>
+
+        <!-- Password Modal -->
+        <div id="passwordModal" class="modal">
+            <div class="modal-content">
+                <h2>Enter Access Password</h2>
+                <input type="password" id="accessPassword" class="input-field" placeholder="Password">
+                <button id="submitPassword" class="action-button">Submit</button>
+                <p id="passwordError" style="color: red;"></p>
+            </div>
+        </div>
+
+
+        <div class="subfooter">
+            <p>Website created by Aesh Goswami</p>
+        </div>
+    </div>
+
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton Academy - Player Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Badminton Academy - Player Management</h1>
+
+        <div id="playerCardContainer" class="player-cards"></div>
+        <button class="action-button" onclick="showPasswordPrompt('add')">Add Player</button>
+    </div>
+
+    <!-- Add Player Modal -->
+    <div id="addPlayerModal" class="modal">
+        <div class="modal-content">
+            <h2>Add New Player</h2>
+            <form id="addPlayerForm">
+                <input type="text" id="playerName" class="input-field" placeholder="Player Name" required>
+                <input type="date" id="admissionDate" class="input-field" required>
+                <input type="number" id="fees" class="input-field" placeholder="Fees" required>
+                <select id="status" class="input-field" required>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+                <button type="button" class="action-button" onclick="addPlayer()">Submit</button>
+            </form>
+            <button class="action-button" onclick="closeAddPlayerModal()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Password Modal -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Password</h2>
+            <input type="password" id="passwordInput" class="input-field" placeholder="Password" required>
+            <button class="action-button" onclick="validatePassword()">Submit</button>
+            <button class="action-button" onclick="closePasswordModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
